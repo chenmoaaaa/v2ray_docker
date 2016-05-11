@@ -1,0 +1,19 @@
+{
+  "port": 18888,
+  "log" : {
+    "access": "/var/log/v2ray/access.log",
+    "error": "/var/log/v2ray/error.log",
+    "loglevel": "warning"
+  },
+  "inbound": {
+    "protocol": "vmess",
+    "settings": {
+      "clients": [
+        {
+          "id": "af0fe76e-56a3-4d75-afb7-f03b0c3006a0",
+          "level": 1,
+		  "alterId": 10
+        }
+      ]
+    }
+  }
