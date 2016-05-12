@@ -16,4 +16,5 @@ ADD config.json /etc/v2ray/config.json
 ADD start.sh /usr/local/bin/start.sh
 
 RUN chmod 755 /usr/local/bin/start.sh
+EXPOSE 18888
 CMD ["sh", "-c", "start.sh"]
