@@ -8,6 +8,7 @@ MAINTAINER Mai Senlin <2858876091@qq.com>
 RUN apt-get -qq update && \
     apt-get install -q -y wget build-essential python-pip python-m2crypto && \
     apt-get install -y curl && \
+    apt-get install -y unzip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 	
