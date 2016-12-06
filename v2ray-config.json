@@ -7,7 +7,7 @@
 },
 
 "inbound": {
-        "port": 28000,
+        "port": 8888,
         "protocol": "vmess",
         "settings": {
             "clients": [
@@ -25,12 +25,12 @@
 
 "inboundDetour": [
   {
-            "port": 28000,
+            "port": 8888,
             "protocol": "vmess",
             "settings": {
                 "clients": [
                     {
-                        "id": "ee1571a1-6e06-486e-9c66-73bdd6155d04",  //替换你的UUID不能重复
+                        "id": "ee1571a1-6e06-486e-9c66-73bdd6155d04",
                         "level": 1,
                         "alterId": 100
                     }
@@ -38,12 +38,12 @@
             }
   },
   {
-            "port": 28001,       //kcp (udp) 动态端口主监听端口
+            "port": 8889,
             "protocol": "vmess",
             "settings": {
                 "clients": [
                     {
-                        "id": "fc20c096-3b7f-424d-a0c8-6a07e525e2c4",  //替换你的UUID不能重复
+                        "id": "fc20c096-3b7f-424d-a0c8-6a07e525e2c4",
                         "level": 1,
                         "alterId": 100
                     }
@@ -57,12 +57,12 @@
             }
   },
   {
-            "port": 28001,       //tcp (tcp) 动态端口主监听端口
+            "port": 8889,
             "protocol": "vmess",
             "settings": {
                 "clients": [
                     {
-                        "id": "71e5bc96-a5e1-460a-acee-c806afdaae2d",  //替换你的UUID不能重复
+                        "id": "71e5bc96-a5e1-460a-acee-c806afdaae2d",
                         "level": 1,
                         "alterId": 100
                     }
@@ -74,13 +74,13 @@
   },
   {
             "protocol": "vmess",
-            "port": "50001-50100",   //kcp (udp)动态端口监听范围 
+            "port": "50001-50100",
             "tag": "detour-kcp",
             "settings": {},
             "allocate": {
-                "strategy": "random", //随机
-                "concurrency": 2,     //开放2个端口
-                "refresh": 5          //5分钟刷新一次
+                "strategy": "random", 
+                "concurrency": 2,
+                "refresh": 5
             },
             "streamSettings": {
                 "network": "kcp"
@@ -88,7 +88,7 @@
   },
   {
             "protocol": "vmess",
-            "port": "50001-50100",   //tcp (tcp)动态端口监听范围 
+            "port": "50001-50100",
             "tag": "detour-tcp",
             "settings": {},
             "allocate": {
